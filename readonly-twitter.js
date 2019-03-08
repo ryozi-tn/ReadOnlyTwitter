@@ -8,6 +8,7 @@ function removeTweetableElements(element) {
         '.timeline-tweet-box',
         '.ProfileTweet-action--reply',
         '.promoted-tweet', // F*CK PROMOTION
+        '.inline-reply-tweetbox-container',
     ]
     removeElements(element, TWEETABLE_ELEMENT_QUERIES)
 }
@@ -41,7 +42,7 @@ const observer = new MutationObserver(function (mutations) {
 })
 
 function start_observe() {
-    const rootElement = document.getElementById('doc')
+    const rootElement = document.body
     removeTweetableElements(rootElement)
     observer.observe(rootElement, {
         childList: true,
