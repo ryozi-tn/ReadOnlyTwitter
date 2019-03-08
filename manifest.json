@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "ReadOnly Twitter",
+    "version": "1.0",
+    "description": "DON'T TWEET !!",
+    "icons": {
+        "48": "icons/logo-48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/*"
+            ],
+            "js": [
+                "readonly-twitter.js"
+            ]
+        }
+    ]
+}
